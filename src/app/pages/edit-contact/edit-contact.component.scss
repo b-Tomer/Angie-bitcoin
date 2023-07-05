@@ -3,15 +3,25 @@
 .contact-edit-container {
     background-color: $clr2;
     min-height: 70vh;
+    padding: 20px;
 
-    button{
-        justify-self: center;
-        border: none;
-        background-color: inherit;
-        cursor: pointer;
-    }
 
     .contact-edit {
+        a {
+            justify-self: flex-end;
+        }
+        
+        h4 {
+            line-height: 0.5rem;
+        }
+        
+        button {
+            font-size: 1.1rem;
+            border: none;
+            background-color: inherit;
+            cursor: pointer;
+        }
+
         display: grid;
         gap: 5px;
         justify-items: start;
@@ -19,6 +29,10 @@
         border-radius: 3px;
         color: $clr5;
         margin-block: 10px;
+        border: 1px solid $clr4;
+        border-radius: 12px;
+        padding: 12px;
+        width: fit-content;
 
         input {
             border: none;
@@ -28,13 +42,14 @@
             width: 195px;
         }
 
-        button {
-            justify-self: center;
+        .btn {
+            margin-top: 30px;
+            justify-self: flex-end;
             border: none;
             background-color: inherit;
             color: #707a8a;
             font-size: 1.2rem;
-            margin-right: 60px;
+
             &:hover i {
                 color: $clrYellow;
             }

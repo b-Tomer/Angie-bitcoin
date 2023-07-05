@@ -1,4 +1,5 @@
 @import '../../../assets/set-up/variables';
+@import '../../../assets/set-up/mixins';
 
 .app-header {
     display: flex;
@@ -10,7 +11,10 @@
     background-color: $clr1;
     border-bottom: 1px solid $clr4;
     color: $clr5;
-
+    @include for-narrow-layout {
+        padding: 0;
+        // justify-content: center;
+    }
     .user {
         display: flex;
         align-items: center;

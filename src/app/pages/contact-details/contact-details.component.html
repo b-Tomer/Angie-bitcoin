@@ -28,11 +28,11 @@
         <div class="moves">
             <div class="trades">
                 <section *ngFor="let move of moves">
-                  <span>{{ move.to }}</span>
-                  <span>{{ move.amount }}</span>
-                  <span>{{ move.at }}</span>
+                    <span> {{ move.to }} </span>
+                    <span> {{ move.amount }} BTC </span>
+                    <span>, {{ move.at | date }} </span>
                 </section>
-              </div>
+            </div>
         </div>
     </section>
 </article>

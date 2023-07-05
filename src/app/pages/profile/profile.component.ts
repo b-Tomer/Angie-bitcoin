@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/services/user.service';
 import { User } from 'src/app/models/contact.model';
+import { BitcoinService } from 'src/app/services/bitcoin.service';
 
 @Component({
   selector: 'app-profile',
@@ -10,8 +11,12 @@ import { User } from 'src/app/models/contact.model';
 export class ProfileComponent implements OnInit {
   user: User = <User>{};
   moves: any[] = [];
+  rateToShow: Promise<number> = this.bitcionService.getRate()
 
-  constructor(private userService: UserService) { }
+  constructor(
+    private userService: UserService,
+    private bitcionService: BitcoinService,
+    ) { }
 
   ngOnInit(): void {
     this.userService.user$.subscribe((user: User) => {

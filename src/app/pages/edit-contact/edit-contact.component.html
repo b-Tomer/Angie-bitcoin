@@ -1,15 +1,15 @@
 <section class="contact-edit-container">
 
-    <a routerLink="/contact">
-        <button><i class="fa-solid fa-arrow-left fa-rotate-180" style="color: #707a8a;"></i></button>
-    </a>
     <form (ngSubmit)="save()" *ngIf="contact" class="contact-edit">
+        <a routerLink="/contact">
+            <button><i class="fa-solid fa-arrow-left fa-rotate-180" style="color: #707a8a;"></i></button>
+        </a>
         <h4>Name</h4>
         <input [(ngModel)]="contact.name" [ngModelOptions]="{standalone: true}" type="text">
         <h4>Email</h4>
         <input [(ngModel)]="contact.email"  [ngModelOptions]="{standalone: true}" type="text">
         <h4>Phone</h4>
         <input [(ngModel)]="contact.phone"  [ngModelOptions]="{standalone: true}" type="text">
-        <button type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
+        <button class="btn" type="submit"><i class="fa-solid fa-floppy-disk"></i></button>
     </form>
 </section>

@@ -1,4 +1,5 @@
 @import "../../../assets/set-up/variables";
+@import "../../../assets/set-up/mixins";
 
 .contact-preview {
     border-radius: 3px;
@@ -11,6 +12,11 @@
     justify-content: space-between;
     color: $clr5;
     font-weight: 500;
+
+    @include for-narrow-layout {
+        flex-direction: column;
+    }
+
     &:hover {
         background-color: $clr1;
         cursor: pointer;
@@ -30,7 +36,9 @@
         height: 80px;
         border-radius: 50%;
         align-self: center;
-
+        @include for-narrow-layout {
+            align-self: flex-start;
+        }
     }
 
     .info {

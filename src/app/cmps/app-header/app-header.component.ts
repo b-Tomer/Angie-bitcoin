@@ -23,9 +23,9 @@ export class AppHeaderComponent {
   @Output() switchTheme = new EventEmitter();
 
   async ngOnInit() {
-    this.userService.getUser();
-    this.user$ = this.userService.user$;
- 
+    this.userService.getUser()
+    this.user$ = this.userService.user$
+    this.rateToShow =this.bitcionService.getRate()
   }
 
   
