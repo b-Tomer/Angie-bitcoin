@@ -1,0 +1,23 @@
+<aside class="side-menu">
+    <nav>
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><button class="menu-btn ,{ active: $route.path === '/' }">
+                <!-- <img class="svg-home" :src="svgHome" alt="SVG Image" /> -->
+                <span class="menu-txt">Home</span> </button></a>
+        <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><button class="menu-btn ,{ active: $route.path === '/contact' }">
+                <!-- <img class="svg" :src="svgContacts" alt="SVG Image" /> -->
+                <span class="menu-txt">Trade</span></button>
+        </a>
+        <a routerLink="/chart" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><button class="menu-btn ,{ active: $route.path === '/chart' }">
+                <!-- <img class="svg" :src="svgChart" alt="SVG Image" /> -->
+                <span class="menu-txt">Dashboard</span></button>
+        </a>
+        <a *ngIf="isUserConnected()" routerLink="/profile" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><button class="menu-btn ,{ active: $route.path === '/about' }">
+                <!-- <img class="svg-home" :src="svgAbout" alt="SVG Image" /> -->
+                <span class="menu-txt">Profile</span></button>
+        </a>
+        <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}"><button class="menu-btn ,{ active: $route.path === '/about' }">
+                <!-- <img class="svg-home" :src="svgAbout" alt="SVG Image" /> -->
+                <span class="menu-txt">About</span></button>
+        </a>
+    </nav>
+</aside>

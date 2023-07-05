@@ -1,0 +1,17 @@
+<header class="app-header">
+    <h2><i class="fa-brands fa-bitcoin" style="color: #fcd535;"></i> Angie</h2>
+    <div *ngIf="isUserConnected()" class="user">
+        <p>
+            {{(user$ | async )?.name}} |
+        </p>
+        <p>
+            {{(user$ | async )?.balance}} |
+        </p>
+        <img src="https://robohash.org/12?set=set5" alt="">
+    </div>
+    <div class="header-rate">
+        <i class="fa-brands fa-bitcoin" style="color: #fcd535;"></i>
+        <h4> {{ rateToShow | async}}$</h4>
+    </div>
+
+</header>

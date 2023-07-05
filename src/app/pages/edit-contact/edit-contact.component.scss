@@ -1,0 +1,47 @@
+@import "../../../assets/set-up/variables";
+
+.contact-edit-container {
+    background-color: $clr2;
+    min-height: 70vh;
+
+    button{
+        justify-self: center;
+        border: none;
+        background-color: inherit;
+        cursor: pointer;
+    }
+
+    .contact-edit {
+        display: grid;
+        gap: 5px;
+        justify-items: start;
+        padding: 20px;
+        border-radius: 3px;
+        color: $clr5;
+        margin-block: 10px;
+
+        input {
+            border: none;
+            box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+            border-radius: 3px;
+            height: 35px;
+            width: 195px;
+        }
+
+        button {
+            justify-self: center;
+            border: none;
+            background-color: inherit;
+            color: #707a8a;
+            font-size: 1.2rem;
+            margin-right: 60px;
+            &:hover i {
+                color: $clrYellow;
+            }
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

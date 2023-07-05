@@ -1,0 +1,29 @@
+<section class="profile-container">
+    <div class="title">
+      <h2>{{ user.name }}</h2>
+      <img src="https://robohash.org/12?set=set5" alt="">
+    </div>
+    <section class="info">
+      <div class="card">
+        <span>Total balance:</span>
+        <h4>{{ user.balance }} BTC</h4>
+      </div>
+      <div class="card">
+        <span>Total trades:</span>
+        <h4>{{ user.moves.length }} Trades</h4>
+      </div>
+      <div class="card">
+        <span>BTC price:</span>
+        <h4>$</h4>
+      </div>
+    </section>
+  
+    <div class="trades">
+      <section *ngFor="let move of moves">
+        <span>{{ move.to }}</span>
+        <span>{{ move.amount }}</span>
+        <span>{{ move.at | date }}</span>
+      </section>
+    </div>
+  </section>
+  

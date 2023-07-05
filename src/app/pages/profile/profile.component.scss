@@ -1,0 +1,68 @@
+@import "../../../assets/set-up/variables";
+@import "../../../assets/set-up/mixins";
+
+.profile-container {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    background-color: $clr2;
+    align-items: center;
+    color: $clr5;
+    gap: 5px;
+    min-height: 80vh;
+    width: fit-content;
+    padding-right: 20px;
+
+    // Responsive styles for narrow layout
+    @include for-narrow-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .title {
+        h2 {
+            margin: 0;
+            text-align: center;
+        }
+
+        img {
+            width: 160px;
+            border-radius: 50%;
+            margin: auto;
+        }
+    }
+
+    .info {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+
+        .card {
+            border-radius: 12px;
+            padding: 10px;
+            background-color: $clr3;
+
+            span {
+                display: block;
+                color: $clrYellow;
+            }
+
+            h4 {
+                margin: 5px 0;
+            }
+        }
+    }
+
+    .trades {
+        section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+            border: 1px solid $clr4;
+            border-radius: 12px;
+
+            span {
+                color: $clr5;
+            }
+        }
+    }
+}

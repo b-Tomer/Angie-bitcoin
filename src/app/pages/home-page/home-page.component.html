@@ -1,0 +1,13 @@
+<img src="https://images.unsplash.com/photo-1633158829875-e5316a358c6f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+    alt="">
+<div class="start">
+    <div class="error" [ngClass]="error ? 'on' : 'off'">
+        <p>
+          Please enter a name!
+        </p>
+    </div> 
+    <form (ngSubmit)="onSaveUser()">
+        <input [(ngModel)]="user" type="text" placeholder="Your name" [ngModelOptions]="{standalone: true}" />
+        <button>Quick start</button>
+    </form>
+</div>

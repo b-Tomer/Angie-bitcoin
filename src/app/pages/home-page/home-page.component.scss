@@ -1,0 +1,81 @@
+@import "../../../assets/set-up/variables";
+@import "../../../assets/set-up/mixins";
+
+img {
+    width: 100%;
+    max-width: 1000px;
+    height: 90vh;
+}
+
+.start {
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .error {
+        z-index: 1;
+        position: absolute;
+        border-radius: 10px;
+        padding: rem(20px);
+        background-color: rgba(165, 154, 38, 0.561);
+        font-size: rem(16px);
+        bottom: 60px;
+        right: -160px;
+        transform: rotate(20deg);
+        opacity: 0;
+        transition: opacity 0.5s;
+        &.on {
+          opacity: 1;
+        }
+    }
+
+    position: absolute;
+    left: 25%;
+    bottom: 30%;
+
+    @include for-narrow-layout {
+
+        bottom: 20%;
+    }
+
+    input {
+        border: none;
+        color: $clr2;
+        width: 145px;
+        background-color: inherit;
+        height: 100%;
+        outline: none;
+        box-shadow: -1px 1px 8px #00000045;
+        width: 150px;
+        border-radius: 6px;
+        height: 30px;
+        margin-left: 2px;
+        font-weight: 600;
+
+        &::placeholder {
+            color: aliceblue;
+        }
+    }
+
+    button {
+        background-color: #fcd43500;
+        color: $clr2;
+        border: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        width: 160px;
+        height: 3rem;
+        border-radius: 12px;
+        color: $clr3;
+        border: 0.5px solid $clr3;
+
+        &:hover {
+            // background: #fede77;
+            cursor: pointer;
+            color: rgba(168, 139, 59, 0.802);
+        }
+    }
+}

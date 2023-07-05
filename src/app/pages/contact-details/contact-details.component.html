@@ -1,0 +1,38 @@
+<article ng-if="contact" class="contact-details">
+
+    <a routerLink="/contact">
+        <button><i class="fa-solid fa-arrow-left fa-rotate-180" style="color: #707a8a;"></i></button>
+    </a>
+    <h2>{{ contact.name }}</h2>
+    <div class="main-details">
+        <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
+        <h3>Email: {{ contact.email }}</h3>
+        <h3>Balance: {{ contact.balance }}$</h3>
+        <h3>Phone: {{ contact.phone }}</h3>
+    </div>
+    <section class="side-container">
+
+        <div class="transfer">
+            <h3>Transfer coins to <span>
+                    {{ contact.name }}:
+                </span>
+            </h3>
+
+            <div class="send">
+                Send:
+                <input [(ngModel)]="transferInput" type="text" inputmode="numeric" pattern="[0-9]*">
+                <button (click)="onTransfer()"><i class="fa-solid fa-paper-plane" style="color: #707a8a;"></i></button>
+            </div>
+        </div>
+
+        <div class="moves">
+            <div class="trades">
+                <section *ngFor="let move of moves">
+                  <span>{{ move.to }}</span>
+                  <span>{{ move.amount }}</span>
+                  <span>{{ move.at }}</span>
+                </section>
+              </div>
+        </div>
+    </section>
+</article>

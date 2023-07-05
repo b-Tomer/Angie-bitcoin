@@ -1,0 +1,19 @@
+<section (click)="onDetails()" class="contact-preview">
+    <img src="https://robohash.org/{{contact._id}}?set=set5" alt="">
+    <section class="info">
+        <section class="data">
+            <p>Name: {{contact.name}}</p>
+            <p>Email: {{contact.email}}</p>
+            <p>Phone: {{contact.phone}}</p>
+        </section>
+    </section>
+    <section class="actions">
+        <a [routerLink]="['/contact', contact._id]">
+            <button title="Details"><i class="fa-regular fa-circle-question" style="color: #707a8a;"></i></button>
+        </a>
+        <a [routerLink]="['/contact/edit', contact._id]">
+            <button><i class="fa-regular fa-pen-to-square" style="color: #707a8a;"></i></button>
+        </a>
+        <button (click)="onRemoveContact($event)" class=""><i class="fa-solid fa-trash-can" style="color: #707a8a;"></i></button>
+    </section>
+</section>

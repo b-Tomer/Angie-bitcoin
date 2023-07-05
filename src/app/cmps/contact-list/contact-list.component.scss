@@ -1,0 +1,10 @@
+@import "../../../assets/set-up/variables";
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-block: 1em;
+    padding-block: 10px;
+    gap: 10px;
+}
